@@ -3,7 +3,8 @@
 A Serverless Web App for Math Operations
 This project demonstrates a serverless web application built using AWS Amplify to perform math functions through an interactive user interface. It utilizes various AWS services to achieve a scalable and cost-effective solution.
 
-![image](https://github.com/user-attachments/assets/2e1cad04-ef95-42fa-a87a-205c4ec312c9)
+![image](https://github.com/user-attachments/assets/719a804f-4831-4c1d-a116-6910ea326005)
+
 
 ## Features
 
@@ -225,4 +226,5 @@ Now when you click on the domain link it should open up your app in another tab 
 Give it a try! Put some numbers into the text box and click calculate.
 Here is an example showing the results of 3 x 5.
 
-![image](https://github.com/user-attachments/assets/87e6466d-869d-42a6-ac11-b7d91b34cd67)
+![image](https://github.com/user-attachments/assets/d20198b1-5ea3-4ff6-ae39-e1dfcb59c1fb)
+
