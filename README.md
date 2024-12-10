@@ -3,8 +3,7 @@
 A Serverless Web App for Math Operations
 This project demonstrates a serverless web application built using AWS Amplify to perform math functions through an interactive user interface. It utilizes various AWS services to achieve a scalable and cost-effective solution.
 
-![image](https://github.com/user-attachments/assets/6da32ef2-8aae-42e1-9948-33269dcbdc70)
-
+![image](https://github.com/user-attachments/assets/2e1cad04-ef95-42fa-a87a-205c4ec312c9)
 
 ## Features
 
@@ -28,20 +27,16 @@ This project demonstrates a serverless web application built using AWS Amplify t
 
 ![image](https://github.com/user-attachments/assets/8c9ab9f0-6976-4611-835e-0fab999e3524)
 
-
-
 2.	Deploy the Frontend:
 - In the "App Setup" section, select "Frontend" and choose a hosting method (e.g., drag and drop your zipped HTML file named "index.zip").
 - Confirm the upload and deployment of your frontend code.
 
 ![image](https://github.com/user-attachments/assets/812e47cd-9744-4a02-9cb1-6a2143f6e38a)
 
-
 the file should be uploaded as index.zip instead of as indicated in the image.
 The user interface portion of this project is now live and available!.
 
 ![image](https://github.com/user-attachments/assets/89972dbb-ae1c-4720-88b9-2fa7dd4583e6)
-
 
 ## Setting Up Lambda Function
 1.	Create a Lambda Function:
@@ -50,8 +45,6 @@ The user interface portion of this project is now live and available!.
 - Assign a name (e.g., FunWithMath) and select the latest Python version for runtime.
 
 ![image](https://github.com/user-attachments/assets/fae500ac-d5ef-4cb6-82a2-e7d60f2160a3)
-
-
 
 2.	Implement the Lambda Function:
 - Paste the following code into the code editor:
@@ -81,11 +74,9 @@ def lambda_handler(event, context):
 
 ![image](https://github.com/user-attachments/assets/07fdb76b-3220-4418-9353-89190b749d25)
 
-
 Then the next step is to test the code.
 
 ![image](https://github.com/user-attachments/assets/a79cbd37-9925-4962-92d1-3bdce0a87370)
-
 
 ## Setting Up API Gateway
 To create a public endpoint for our Lambda function, we'll use the API Gateway service:
@@ -93,18 +84,14 @@ To create a public endpoint for our Lambda function, we'll use the API Gateway s
 
 ![image](https://github.com/user-attachments/assets/9b7e0211-4941-4e2a-b453-8a87c592fc79)
 
-
 - Under "Resources," select the forward slash (/) and click "Create Method."
 - Set the HTTP method to "POST" as we'll be sending data to the Lambda function.
 
 ![image](https://github.com/user-attachments/assets/c723dbb2-7e0b-424f-a070-8e6a2e9ea665)
 
-
 - Choose "Lambda Function" as the integration type and select your specific function (e.g., mathFunction). Leave the rest of the settings unchanged. Click "Create Method.".
 
 ![image](https://github.com/user-attachments/assets/a3c6453d-8117-4aa1-9286-068bd35ddf03)
-
-
 
 Next Steps:.
 - We'll configure CORS (Cross-Origin Resource Sharing) to allow your Amplify frontend to access the API.
@@ -114,17 +101,13 @@ Next Steps:.
 
 ![image](https://github.com/user-attachments/assets/c8ef01cd-c9bb-4c2c-b555-1da82f539abf)
 
-
 - We'll create a stage and deploy our API.
 
 ![image](https://github.com/user-attachments/assets/bf4ca14b-c5bb-4a34-bce7-f03d5d73a31d)
 
-
 - Finally, we'll test the API call using the generated invoke URL.
 
 ![image](https://github.com/user-attachments/assets/58187312-9f3d-489a-9983-eae0e2cc4ecd)
-
-
 
 Now we can trigger our lambda function through an API call
 ## Integrating DynamoDB for Result Storage
@@ -137,14 +120,12 @@ This section outlines how to store calculation results in a DynamoDB database an
 
 ![image](https://github.com/user-attachments/assets/1f295d60-2eaf-4d05-8c3d-3d43dd9e2f91)
 
-
 2. Configure IAM Policy for Lambda Function
 - Go to your Lambda function and navigate to "Configuration" -> "Permissions.".
 - Click on the existing role name or create a new role if needed.
 - Under "Add permissions," select "Create an inline policy.".
 
 ![image](https://github.com/user-attachments/assets/fca053ce-d070-49dd-a85d-214e6a1cc7ee)
-
 
 - Use the following JSON policy template, replacing <your-table-arn> with the actual ARN of your DynamoDB table:
 ```
@@ -169,7 +150,6 @@ This section outlines how to store calculation results in a DynamoDB database an
 ```
 
 ![image](https://github.com/user-attachments/assets/119b44b7-4e75-459e-8d48-62a2bc5d8e54)
-
 
 - Name the policy and click "Create policy.".
 3. Update Lambda Function Code.
@@ -241,12 +221,8 @@ In the section that looks like this.
 
 ![image](https://github.com/user-attachments/assets/fd0fada8-d530-4d29-9cea-4a3e8934a3be)
 
-
 Now when you click on the domain link it should open up your app in another tab as it did before.
 Give it a try! Put some numbers into the text box and click calculate.
 Here is an example showing the results of 3 x 5.
 
-![image](https://github.com/user-attachments/assets/9f6f28c8-9f41-4c72-8849-bf309b111a63)
-
-
-
+![image](https://github.com/user-attachments/assets/87e6466d-869d-42a6-ac11-b7d91b34cd67)
