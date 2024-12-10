@@ -22,14 +22,14 @@ This project demonstrates a serverless web application built using AWS Amplify t
 ## Getting Started
 
 ## Setup Amplify
-1.	Create a New Amplify Application: 
+1.	Create a New Amplify Application:
 o	Navigate to the AWS Amplify service in the AWS Management Console.
 o	Click "Create an app" and provide a name (e.g., FunWithMath) and a branch name (e.g., dev).
 
 ![image](https://github.com/user-attachments/assets/8d371db7-dcfa-4985-94bd-ab2cd44125cb)
 
 
-3.	Deploy the Frontend: 
+2.	Deploy the Frontend:
 •	In the "App Setup" section, select "Frontend" and choose a hosting method (e.g., drag and drop your zipped HTML file named "index.zip").
 •	Confirm the upload and deployment of your frontend code.
 
@@ -49,7 +49,7 @@ o	Assign a name (e.g., FunWithMath) and select the latest Python version for run
 ![image](https://github.com/user-attachments/assets/7f71f8a1-269d-4b25-916e-e7ae18edd18c)
 
 
-3.	Implement the Lambda Function: 
+2.	Implement the Lambda Function: 
 o	Paste the following code into the code editor:
 ```
 # import the JSON utility package
@@ -81,7 +81,7 @@ Then the next step is to test the code.
 
 ![image](https://github.com/user-attachments/assets/49698645-9317-4013-9ab6-fee46db4a632)
 
-Setting Up API Gateway
+## Setting Up API Gateway
 To create a public endpoint for our Lambda function, we'll use the API Gateway service:
 •	Navigate to the API Gateway service and create a new "REST API.".
 
@@ -119,13 +119,13 @@ This section outlines how to store calculation results in a DynamoDB database an
 1. Create a DynamoDB Table
 •	Navigate to the DynamoDB service and create a new table.
 •	Name your table appropriately (e.g., FunWithMathResults).
-•	Define the table schema with attributes to store relevant data. Here's a suggestion: 
-o	UserID (String): A unique identifier for the calculation result.
+•	Define the table schema with attributes to store relevant data. Here's a suggestion:.
+- UserID (String): A unique identifier for the calculation result.
 
 ![image](https://github.com/user-attachments/assets/5b820997-b331-42bf-9a4e-4cd7c9285cd7)
 
-2. Configure IAM Policy for Lambda Function
-•	Go to your Lambda function and navigate to "Configuration" -> "Permissions."
+2. Configure IAM Policy for Lambda Function.
+•	Go to your Lambda function and navigate to "Configuration" -> "Permissions.".
 •	Click on the existing role name or create a new role if needed.
 •	Under "Add permissions," select "Create an inline policy.".
 
@@ -155,9 +155,9 @@ o	UserID (String): A unique identifier for the calculation result.
 
 ![image](https://github.com/user-attachments/assets/26cff9ac-f3f4-42f6-8b15-a9a5a3df07a5)
 
-•	Name the policy and click "Create policy."
-3. Update Lambda Function Code
-•	Modify your Lambda function's Python code to interact with DynamoDB:
+•	Name the policy and click "Create policy.".
+3. Update Lambda Function Code.
+•	Modify your Lambda function's Python code to interact with DynamoDB:.
 ```python
 # Import the JSON utility package
 import json
@@ -209,9 +209,9 @@ def lambda_handler(event, context):
             'body': json.dumps(f'Error: {str(e)}')
         }
    ```
-4. Update Frontend Code (index.html)
+4. Update Frontend Code (index.html).
 •	Replace the placeholder YOUR-API-URL in your index.html file with the actual invoke URL obtained from API Gateway.
-In the section that looks like this
+In the section that looks like this.
 ```
 // make API call with parameters and use promises to get response
             fetch("YOUR-API-URL", requestOptions)
@@ -219,7 +219,7 @@ In the section that looks like this
             .then(result => alert(JSON.parse(result).body))
             .catch(error => console.log('error', error));
 ```
-5. Redeploy the Application
+5. Redeploy the Application.
 •	Navigate back to your Amplify project.
 •	Select "Deploy updates" and upload the updated index.html file.
 
