@@ -22,14 +22,14 @@ This project demonstrates a serverless web application built using AWS Amplify t
 ## Getting Started
 
 ## Setup Amplify
-1.	Create a New Amplify Application:
+1.	Create a New Amplify Application:.
 o	Navigate to the AWS Amplify service in the AWS Management Console.
 o	Click "Create an app" and provide a name (e.g., FunWithMath) and a branch name (e.g., dev).
 
 ![image](https://github.com/user-attachments/assets/8d371db7-dcfa-4985-94bd-ab2cd44125cb)
 
 
-2.	Deploy the Frontend:
+2.	Deploy the Frontend:.
 •	In the "App Setup" section, select "Frontend" and choose a hosting method (e.g., drag and drop your zipped HTML file named "index.zip").
 •	Confirm the upload and deployment of your frontend code.
 
@@ -41,7 +41,7 @@ The user interface portion of this project is now live and available!.
 ![image](https://github.com/user-attachments/assets/5087426d-ada1-41dc-9f4a-a9d4624634fe)
 
 ## Setting Up Lambda Function
-1.	Create a Lambda Function: 
+1.	Create a Lambda Function:.
 o	Navigate to the AWS Lambda service in the console.
 o	Click "Create function" and choose "Author from scratch".
 o	Assign a name (e.g., FunWithMath) and select the latest Python version for runtime.
@@ -49,7 +49,7 @@ o	Assign a name (e.g., FunWithMath) and select the latest Python version for run
 ![image](https://github.com/user-attachments/assets/7f71f8a1-269d-4b25-916e-e7ae18edd18c)
 
 
-2.	Implement the Lambda Function: 
+2.	Implement the Lambda Function:.
 o	Paste the following code into the code editor:
 ```
 # import the JSON utility package
@@ -72,7 +72,7 @@ def lambda_handler(event, context):
     'body': json.dumps('Your result is ' + str(mathResult))
     }
 ```
-3.	Deploy the Lambda Function: 
+3.	Deploy the Lambda Function:.
 o	Click the "Deploy" button to activate your Lambda function.
 
 ![image](https://github.com/user-attachments/assets/27356aaa-57d2-4555-b536-8a3e79de0d23)
@@ -82,7 +82,7 @@ Then the next step is to test the code.
 ![image](https://github.com/user-attachments/assets/49698645-9317-4013-9ab6-fee46db4a632)
 
 ## Setting Up API Gateway
-To create a public endpoint for our Lambda function, we'll use the API Gateway service:
+To create a public endpoint for our Lambda function, we'll use the API Gateway service:.
 •	Navigate to the API Gateway service and create a new "REST API.".
 
 ![image](https://github.com/user-attachments/assets/1b67841a-1b5c-4620-b207-3398e0176462)
@@ -97,7 +97,7 @@ To create a public endpoint for our Lambda function, we'll use the API Gateway s
 ![image](https://github.com/user-attachments/assets/cc488228-2fea-420f-8af1-53a4263d2b26)
 
 
-Next Steps:
+Next Steps:.
 •	We'll configure CORS (Cross-Origin Resource Sharing) to allow your Amplify frontend to access the API.
 •	We'll create a stage and deploy our API.
 
@@ -116,7 +116,7 @@ Next Steps:
 Now we can trigger our lambda function through an API call
 ## Integrating DynamoDB for Result Storage
 This section outlines how to store calculation results in a DynamoDB database and retrieve them in the user interface.
-1. Create a DynamoDB Table
+1. Create a DynamoDB Table.
 •	Navigate to the DynamoDB service and create a new table.
 •	Name your table appropriately (e.g., FunWithMathResults).
 •	Define the table schema with attributes to store relevant data. Here's a suggestion:.
