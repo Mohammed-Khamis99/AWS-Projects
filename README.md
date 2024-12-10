@@ -26,19 +26,22 @@ This project demonstrates a serverless web application built using AWS Amplify t
 - Navigate to the AWS Amplify service in the AWS Management Console.
 - Click "Create an app" and provide a name (e.g., FunWithMath) and a branch name (e.g., dev).
 
-![image](https://github.com/user-attachments/assets/8d371db7-dcfa-4985-94bd-ab2cd44125cb)
+![image](https://github.com/user-attachments/assets/8c9ab9f0-6976-4611-835e-0fab999e3524)
+
 
 
 2.	Deploy the Frontend:
 - In the "App Setup" section, select "Frontend" and choose a hosting method (e.g., drag and drop your zipped HTML file named "index.zip").
 - Confirm the upload and deployment of your frontend code.
 
-![image](https://github.com/user-attachments/assets/288edd78-cd81-41b7-bc8c-f8b50ca8dccc)
+![image](https://github.com/user-attachments/assets/812e47cd-9744-4a02-9cb1-6a2143f6e38a)
+
 
 the file should be uploaded as index.zip instead of as indicated in the image.
 The user interface portion of this project is now live and available!.
 
-![image](https://github.com/user-attachments/assets/5087426d-ada1-41dc-9f4a-a9d4624634fe)
+![image](https://github.com/user-attachments/assets/89972dbb-ae1c-4720-88b9-2fa7dd4583e6)
+
 
 ## Setting Up Lambda Function
 1.	Create a Lambda Function:
@@ -46,7 +49,8 @@ The user interface portion of this project is now live and available!.
 - Click "Create function" and choose "Author from scratch".
 - Assign a name (e.g., FunWithMath) and select the latest Python version for runtime.
 
-![image](https://github.com/user-attachments/assets/7f71f8a1-269d-4b25-916e-e7ae18edd18c)
+![image](https://github.com/user-attachments/assets/fae500ac-d5ef-4cb6-82a2-e7d60f2160a3)
+
 
 
 2.	Implement the Lambda Function:
@@ -75,43 +79,52 @@ def lambda_handler(event, context):
 3.	Deploy the Lambda Function:
 - Click the "Deploy" button to activate your Lambda function.
 
-![image](https://github.com/user-attachments/assets/27356aaa-57d2-4555-b536-8a3e79de0d23)
+![image](https://github.com/user-attachments/assets/07fdb76b-3220-4418-9353-89190b749d25)
+
 
 Then the next step is to test the code.
 
-![image](https://github.com/user-attachments/assets/49698645-9317-4013-9ab6-fee46db4a632)
+![image](https://github.com/user-attachments/assets/a79cbd37-9925-4962-92d1-3bdce0a87370)
+
 
 ## Setting Up API Gateway
 To create a public endpoint for our Lambda function, we'll use the API Gateway service:
 - Navigate to the API Gateway service and create a new "REST API.".
 
-![image](https://github.com/user-attachments/assets/1b67841a-1b5c-4620-b207-3398e0176462)
+![image](https://github.com/user-attachments/assets/9b7e0211-4941-4e2a-b453-8a87c592fc79)
+
 
 - Under "Resources," select the forward slash (/) and click "Create Method."
 - Set the HTTP method to "POST" as we'll be sending data to the Lambda function.
 
-![image](https://github.com/user-attachments/assets/2f533fa0-88dc-4295-9c3f-bc9d7a4b595a)
+![image](https://github.com/user-attachments/assets/c723dbb2-7e0b-424f-a070-8e6a2e9ea665)
+
 
 - Choose "Lambda Function" as the integration type and select your specific function (e.g., mathFunction). Leave the rest of the settings unchanged. Click "Create Method.".
 
-![image](https://github.com/user-attachments/assets/cc488228-2fea-420f-8af1-53a4263d2b26)
+![image](https://github.com/user-attachments/assets/a3c6453d-8117-4aa1-9286-068bd35ddf03)
+
 
 
 Next Steps:.
 - We'll configure CORS (Cross-Origin Resource Sharing) to allow your Amplify frontend to access the API.
 - We'll create a stage and deploy our API.
 
-![image](https://github.com/user-attachments/assets/5934b0e6-ab03-4099-b253-1009b12e077e)
+![image](https://github.com/user-attachments/assets/1ee245b5-8d45-4266-b394-be878f10fafc)
 
-![image](https://github.com/user-attachments/assets/186a2ad0-b2c6-45d3-b9e5-088000022f81)
+![image](https://github.com/user-attachments/assets/c8ef01cd-c9bb-4c2c-b555-1da82f539abf)
+
 
 - We'll create a stage and deploy our API.
 
-![image](https://github.com/user-attachments/assets/b6077ed4-2ba2-4e49-93b5-d1e32db5b4d0)
+![image](https://github.com/user-attachments/assets/bf4ca14b-c5bb-4a34-bce7-f03d5d73a31d)
+
 
 - Finally, we'll test the API call using the generated invoke URL.
 
-![image](https://github.com/user-attachments/assets/adfb66c4-e8c9-4d22-ba66-9cb51ea97c38)
+![image](https://github.com/user-attachments/assets/58187312-9f3d-489a-9983-eae0e2cc4ecd)
+
+
 
 Now we can trigger our lambda function through an API call
 ## Integrating DynamoDB for Result Storage
@@ -122,14 +135,16 @@ This section outlines how to store calculation results in a DynamoDB database an
 - Define the table schema with attributes to store relevant data. Here's a suggestion:.
 - UserID (String): A unique identifier for the calculation result.
 
-![image](https://github.com/user-attachments/assets/5b820997-b331-42bf-9a4e-4cd7c9285cd7)
+![image](https://github.com/user-attachments/assets/1f295d60-2eaf-4d05-8c3d-3d43dd9e2f91)
+
 
 2. Configure IAM Policy for Lambda Function
 - Go to your Lambda function and navigate to "Configuration" -> "Permissions.".
 - Click on the existing role name or create a new role if needed.
 - Under "Add permissions," select "Create an inline policy.".
 
-![image](https://github.com/user-attachments/assets/b1f87d83-4f44-4d9f-84eb-8ed61da87d5a)
+![image](https://github.com/user-attachments/assets/fca053ce-d070-49dd-a85d-214e6a1cc7ee)
+
 
 - Use the following JSON policy template, replacing <your-table-arn> with the actual ARN of your DynamoDB table:
 ```
@@ -153,7 +168,8 @@ This section outlines how to store calculation results in a DynamoDB database an
 }
 ```
 
-![image](https://github.com/user-attachments/assets/26cff9ac-f3f4-42f6-8b15-a9a5a3df07a5)
+![image](https://github.com/user-attachments/assets/119b44b7-4e75-459e-8d48-62a2bc5d8e54)
+
 
 - Name the policy and click "Create policy.".
 3. Update Lambda Function Code.
@@ -223,12 +239,14 @@ In the section that looks like this.
 - Navigate back to your Amplify project.
 - Select "Deploy updates" and upload the updated index.html file.
 
-![image](https://github.com/user-attachments/assets/9adaa69f-1ebb-48cf-9f32-2e01939196ad)
+![image](https://github.com/user-attachments/assets/fd0fada8-d530-4d29-9cea-4a3e8934a3be)
+
 
 Now when you click on the domain link it should open up your app in another tab as it did before.
 Give it a try! Put some numbers into the text box and click calculate.
 Here is an example showing the results of 3 x 5.
 
-![image](https://github.com/user-attachments/assets/8f86423c-6023-42a2-8203-94f0fff2d022)
+![image](https://github.com/user-attachments/assets/9f6f28c8-9f41-4c72-8849-bf309b111a63)
+
 
 
