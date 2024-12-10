@@ -124,7 +124,7 @@ o	UserID (String): A unique identifier for the calculation result.
 
 ![image](https://github.com/user-attachments/assets/5b820997-b331-42bf-9a4e-4cd7c9285cd7)
 
-3. Configure IAM Policy for Lambda Function
+2. Configure IAM Policy for Lambda Function
 •	Go to your Lambda function and navigate to "Configuration" -> "Permissions."
 •	Click on the existing role name or create a new role if needed.
 •	Under "Add permissions," select "Create an inline policy.".
