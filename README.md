@@ -51,6 +51,7 @@ o	Assign a name (e.g., FunWithMath) and select the latest Python version for run
 
 3.	Implement the Lambda Function: 
 o	Paste the following code into the code editor:
+```
 # import the JSON utility package
 import json
 # import the Python math library
@@ -70,6 +71,7 @@ def lambda_handler(event, context):
     'statusCode': 200,
     'body': json.dumps('Your result is ' + str(mathResult))
     }
+```
 3.	Deploy the Lambda Function: 
 o	Click the "Deploy" button to activate your Lambda function.
 
@@ -81,7 +83,8 @@ Then the next step is to test the code.
 
 Setting Up API Gateway
 To create a public endpoint for our Lambda function, we'll use the API Gateway service:
-•	Navigate to the API Gateway service and create a new "REST API."
+•	Navigate to the API Gateway service and create a new "REST API.".
+
 ![image](https://github.com/user-attachments/assets/1b67841a-1b5c-4620-b207-3398e0176462)
 
 •	Under "Resources," select the forward slash (/) and click "Create Method."
