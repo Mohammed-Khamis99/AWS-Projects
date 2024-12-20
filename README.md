@@ -17,7 +17,7 @@ A Serverless Web App for Math Operations This project demonstrates a serverless 
 •	Continuous deployment facilitated by AWS Amplify.
 •	Secure access control with AWS IAM
 
-**Project 2: [Hosting a Static Website using Amazon S3 and CloudFront]**
+**Project 2: [[Hosting a Static Website using Amazon S3 and CloudFront](https://github.com/Mohammed-Khamis99/AWS-Projects/tree/69cd3bd72f3378afb773e492d3539e5fae5b82a7/Hosting%20a%20Static%20Website%20using%20Amazon%20S3%20and%20CloudFront)]**
    - **Description:**
 Amazon S3 stores your static website files, while CloudFront speeds up delivery by caching content globally. This combination ensures your site loads quickly and securely for users worldwide.
    - **Technologies Used:**
