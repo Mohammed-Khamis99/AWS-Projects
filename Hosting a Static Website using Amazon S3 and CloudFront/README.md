@@ -1,5 +1,6 @@
 # Hosting a Static Website using Amazon S3 and CloudFront
 
+
 Amazon S3 stores your static website files, while CloudFront speeds up delivery by caching content globally. This combination ensures your site loads quickly and securely for users worldwide.
 This guide provides step-by-step instructions for hosting a static website on Amazon S3 and accelerating it with CloudFront.
 
