@@ -6,7 +6,7 @@ I am a Junior AWS Cloud Engineer with a passion for cloud computing and building
 
 ## Projects
 
-**Project 1: [Serverless Web Application]**
+**Project 1: [serverless web app]**
 
    - **Description:**
 
