@@ -2,7 +2,7 @@
 
 Hi, I'm Mohammed Khamis!
 
-I am a Junior AWS Cloud Engineer with a passion for cloud computing and building scalable, reliable systems. This repository is dedicated to hosting my AWS projects.
+I am an AWS Cloud Engineer with a passion for cloud computing and building scalable, reliable systems. This repository is dedicated to hosting my AWS projects.
 
 ## Projects
 
