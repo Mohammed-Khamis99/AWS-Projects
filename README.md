@@ -34,5 +34,8 @@ Feel free to reach out to me via [mo.makein@gmail.com] or connect with me on [Li
 
 - **Description:**
 This project automates photo quality assessment using Amazon Rekognition. Clients upload images via an API, and the system returns feedback on whether the photo is suitable for professional profiles (e.g., LinkedIn). Built with Python, Terraform, and AWS serverless services.
- **Technologies Used:**
+  - **Technologies Used:**
   
+- API Gateway: Triggers the Lambda function.
+- AWS Lambda (Python): Processes the image, queries Rekognition, and parses results.
+- Amazon Rekognition: Returns AI-driven analysis (faces, labels, moderation).
