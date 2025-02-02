@@ -39,3 +39,5 @@ This project automates photo quality assessment using **Amazon Rekognition**. Cl
 ![Image](https://github.com/user-attachments/assets/bc5218cc-c904-468e-b2df-189a1006aee4)
 
 ![Image](https://github.com/user-attachments/assets/47f88a56-d77c-48b6-b6f8-2bf8de4cfdff)
+
+![Image](https://github.com/user-attachments/assets/71f25e4c-b5f9-4d0e-b151-c96f89cfd9ac)
