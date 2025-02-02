@@ -30,4 +30,9 @@ Amazon S3 stores your static website files, while CloudFront speeds up delivery 
 
 Feel free to reach out to me via [mo.makein@gmail.com] or connect with me on [LinkedIn]( https://www.linkedin.com/in/mohammed-khamis99).
 
-**Project 3: [Implementing an Image Analyzer] 
+**Project 3: [Implementing an Image Analyzer](https://github.com/Mohammed-Khamis99/AWS-Projects/tree/53958868ce38564b0d24f8c2f60d793b78469f2c/Implementing%20an%20Image%20Analyzer)
+
+- **Description:**
+This project automates photo quality assessment using Amazon Rekognition. Clients upload images via an API, and the system returns feedback on whether the photo is suitable for professional profiles (e.g., LinkedIn). Built with Python, Terraform, and AWS serverless services.
+ **Technologies Used:**
+  
