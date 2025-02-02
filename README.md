@@ -26,10 +26,6 @@ Amazon S3 stores your static website files, while CloudFront speeds up delivery 
 - Amazon S3: provides scalable and durable storage for static website files.
 - Amazon CloudFront.
 
-## Contact
-
-Feel free to reach out to me via [mo.makein@gmail.com] or connect with me on [LinkedIn]( https://www.linkedin.com/in/mohammed-khamis99).
-
 **Project 3: [Implementing an Image Analyzer](https://github.com/Mohammed-Khamis99/AWS-Projects/tree/53958868ce38564b0d24f8c2f60d793b78469f2c/Implementing%20an%20Image%20Analyzer)
 
 - **Description:**
@@ -39,3 +35,8 @@ This project automates photo quality assessment using Amazon Rekognition. Client
 - API Gateway: Triggers the Lambda function.
 - AWS Lambda (Python): Processes the image, queries Rekognition, and parses results.
 - Amazon Rekognition: Returns AI-driven analysis (faces, labels, moderation).
+
+
+## Contact
+
+Feel free to reach out to me via [mo.makein@gmail.com] or connect with me on [LinkedIn]( https://www.linkedin.com/in/mohammed-khamis99).
