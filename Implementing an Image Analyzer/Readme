@@ -1,0 +1,19 @@
+# Image Analyzer to Detect Photo Friendliness 📸
+
+A serverless AWS solution to evaluate if an image meets criteria for being "social media-friendly" by analyzing clarity, lighting, and composition using AI.
+
+---
+
+## 🚀 Overview  
+
+This project automates photo quality assessment using **Amazon Rekognition**. Clients upload images via an API, and the system returns feedback on whether the photo is suitable for professional profiles (e.g., LinkedIn). Built with Python, Terraform, and AWS serverless services.
+
+## ✨ Features 
+
+- **AI-Powered Analysis**: Detects blur, lighting issues, facial clarity, and background distractions.  
+- **Multi-Format Support**: Accepts `.png` and `.jpeg` files.  
+- **Serverless Architecture**: Scalable and cost-efficient with API Gateway, Lambda, and Rekognition.  
+- **Infrastructure-as-Code**: Fully deployed using Terraform.  
+
+## 📋 Architecture 
+
