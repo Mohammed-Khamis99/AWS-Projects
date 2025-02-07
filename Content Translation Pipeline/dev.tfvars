@@ -1,4 +1,4 @@
-en_bucket_name = "the-english-assets-bucket"
-es_bucket_name = "the-spanish-assets-bucket"
-codepipeline_bucket_name = "the-codepipeline-us-east-1-bucket"
-github_repository_url = "https://github.com/Mohammed-Khamis99/AWS-Projects/tree/c55cc629c0a0746be524f0bd5c77a50735ad3f1e/Content%20Translation%20Pipeline"
+en_bucket_name = "english-content-bucket99"
+es_bucket_name = "spanish-content-bucket99"
+codepipeline_bucket_name = "content-translation-pipeline99"
+github_repository_url = "https://github.com/Mohammed-Khamis99/AWS-Projects/tree/a34f183d3b343b00d9f10ed39ad321d239b1437d/Content%20Translation%20Pipeline"
