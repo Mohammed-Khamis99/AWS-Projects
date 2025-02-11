@@ -4,7 +4,7 @@ This project demonstrates the evolution of a WordPress web application from a si
 
 #[Architecture Diagram]
 
-
+![Image](https://github.com/user-attachments/assets/9728a460-552c-4e09-a110-6eeb457d3d09)
 
 ## 📋 Project Overview
 **Evolution Journey:**
