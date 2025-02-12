@@ -8,9 +8,9 @@ This project demonstrates the evolution of a WordPress web application from a si
 
 ## 📋 Project Overview
 **Evolution Journey:**
-1. **Phase 1:** Manual single EC2 instance with Apache+WordPress and MySQL (monolithic)
-2. **Phase 2:** Separated web tier (EC2) and database tier (RDS)
-3. **Phase 3:** Introduced EFS for shared storage, Auto Scaling Groups, and Load Balancer
+1. Manual single EC2 instance with Apache+WordPress and MySQL (monolithic)
+2. Separated web tier (EC2) and database tier (RDS)
+3. Introduced EFS for shared storage, Auto Scaling Groups, and Load Balancer
 4. **Final Architecture:** Multi-AZ deployment with 3-tier VPC architecture
 
 ## 🏗️ Architecture Components
@@ -59,7 +59,8 @@ This project demonstrates the evolution of a WordPress web application from a si
 
 ![Image](https://github.com/user-attachments/assets/c8b9ddb8-e5a9-460d-b6c4-9f2e59348dc8)
 
-*Create SSM Parameter Store values for wordpress*
+*Create SSM Parameter Store values for wordpress*.
+
 Storing configuration information within the SSM Parameter store scales much better than attempting to script them in some way.
 1.	Create Parameter - DBUser (the login for the specific wordpress DB).
 2.	Create Parameter - DBName (the name of the wordpress database).
@@ -69,7 +70,8 @@ Storing configuration information within the SSM Parameter store scales much bet
 
 ![Image](https://github.com/user-attachments/assets/bf9606a5-bfc5-44ad-a93f-33fa1fd38dfb)
 
-*Connect to the instance and install a database and wordpress*
+*Connect to the instance and install a database and wordpress*.
+
 •	Bring in the parameter values from SSM
 Run the commands below to bring the parameter store values into ENV variables to make the manual build easier.
 
@@ -169,9 +171,10 @@ sudo rm /tmp/db.setup
 ![Image](https://github.com/user-attachments/assets/b8657a0e-12c0-44e9-a0d7-42d6e4d7f11c)
 
 ### STEP 2 
-*Create the Launch Template*
-*Add Userdata*
-At this point we need to add the configuration which will build the instance Enter the user data below into the User Data box
+- *Create the Launch Template*
+
+*Add Userdata*.
+At this point we need to add the configuration which will build the instance Enter the user data below into the User Data box.
 
 ```
 #!/bin/bash -xe
@@ -242,7 +245,7 @@ rm /tmp/db.setup
 
 ![Image](https://github.com/user-attachments/assets/1ee02624-2595-4b5a-ab01-85c8f7a54d4f)
 
-Migrate WordPress data from MariaDB to RDS
+• Migrate WordPress data from MariaDB to RDS
 •	Populate Environment Variables
 You're going to do an export of the SQL database running on the local ec2 instance
 First run these commands to populate variables with the data from Parameter store, it avoids having to keep locating passwords
@@ -305,10 +308,12 @@ Click View Launch Template
 Select the template again (dont click) Click Actions and select Set Default Version
 Under Template version select 2
 Click Set as default version
+
 ### STEP 4:
-•	Create EFS File System
-•	Add an fsid to parameter store
-•	Connect the file system to the EC2 instance & copy data
+
+•	Create EFS File System.
+•	Add an fsid to parameter store.
+•	Connect the file system to the EC2 instance & copy data.
 First we need to install the amazon EFS utilities to allow the instance to connect to EFS. EFS is based on NFS which is standard but the EFS tooling makes things easier.
 ```
 sudo dnf -y install amazon-efs-utils
@@ -349,9 +354,10 @@ Once it restarts, ensure that you can still load the wordpress blog which is now
 
 ### STEP 5:
 
-•	Create the load balancer
-•	Create a new Parameter store value with the ELB DNS name
-•	Update the Launch template to wordpress is updated with the ELB DNS as its home
+•	Create the load balancer.
+•	Create a new Parameter store value with the ELB DNS name.
+•	Update the Launch template to wordpress is updated with the ELB DNS as its home.
+
 After #!/bin/bash -xe position cursor at the end & press enter twice to add new lines paste in this
 
 ```
@@ -385,14 +391,22 @@ Scroll down and click Create template version
 Click View Launch Template
 Select the template again (dont click) Click Actions and select Set Default Version
 Under Template version select 4
-Click Set as default version
-•	Create an auto scaling group (no scaling yet)
-Integrate ASG and ALB
-•	Add scaling
+Click Set as default version.
+
+•	Create an auto scaling group (no scaling yet).
+
+• Integrate ASG and ALB.
+
+•	Add scaling.
+
 We're going to add two policies, scale in and scale out.
-•	SCALEOUT when CPU usage on average is above 40%
-•	SCALEIN when CPU usage on average ie below 40%
-•	ADJUST ASG Values
+
+•	SCALEOUT when CPU usage on average is above 40%.
+
+•	SCALEIN when CPU usage on average ie below 40%.
+
+•	ADJUST ASG Values.
+
 Set Desired 1, Minimum 1 and Maximum 3
 Click Update.
 
