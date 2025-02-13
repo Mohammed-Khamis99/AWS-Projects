@@ -26,7 +26,7 @@ Amazon S3 stores your static website files, while CloudFront speeds up delivery 
 - Amazon S3: provides scalable and durable storage for static website files.
 - Amazon CloudFront.
 
-**Project 3: [Implementing an Image Analyzer](https://github.com/Mohammed-Khamis99/AWS-Projects/tree/53958868ce38564b0d24f8c2f60d793b78469f2c/Implementing%20an%20Image%20Analyzer)
+**Project 3: [[Implementing an Image Analyzer](https://github.com/Mohammed-Khamis99/AWS-Projects/tree/53958868ce38564b0d24f8c2f60d793b78469f2c/Implementing%20an%20Image%20Analyzer)]**
 
 - **Description:**
 This project automates photo quality assessment using Amazon Rekognition. Clients upload images via an API, and the system returns feedback on whether the photo is suitable for professional profiles (e.g., LinkedIn). Built with Python, Terraform, and AWS serverless services.
@@ -36,6 +36,10 @@ This project automates photo quality assessment using Amazon Rekognition. Client
 - AWS Lambda (Python): Processes the image, queries Rekognition, and parses results.
 - Amazon Rekognition: Returns AI-driven analysis (faces, labels, moderation).
 
+**Project 4: [[WordPress Scalable and Resilient Architecture on AWS](https://github.com/Mohammed-Khamis99/AWS-Projects/tree/fb18a05af97963957512ec971fe412ca26807453/WordPress%20Scalable%20and%20Resilient%20Architecture%20on%20AWS)]**
+
+- **Description:**
+This project demonstrates the evolution of a WordPress web application from a single instance deployment to a scalable, highly available architecture on AWS. The final architecture leverages multiple AWS services to ensure resilience, auto-scaling, and separation of concerns across tiers.
 
 ## Contact
 
