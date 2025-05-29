@@ -1,6 +1,7 @@
 ## Database Migration: On-Premises (VPC Simulated) to AWS
 This project demonstrates a database migration strategy from a simulated on-premises environment to AWS. The "on-premises" setup is achieved by deploying resources within a Virtual Private Cloud (VPC) that mimics an isolated network, while connectivity to AWS is established using a VPC Peering connection.
-##Introduction:
+
+## Introduction:
 
 Migrating databases from on-premises data centers to the cloud. This project provides a practical example of how to approach such a migration by:
 
