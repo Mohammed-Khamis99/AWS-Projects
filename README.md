@@ -41,6 +41,8 @@ This project automates photo quality assessment using Amazon Rekognition. Client
 - **Description:**
 This project demonstrates the evolution of a WordPress web application from a single instance deployment to a scalable, highly available architecture on AWS. The final architecture leverages multiple AWS services to ensure resilience, auto-scaling, and separation of concerns across tiers.
 
+**Project :
+
 ## Contact
 
 Feel free to reach out to me via [mo.makein@gmail.com] or connect with me on [LinkedIn]( https://www.linkedin.com/in/mohammed-khamis99).
