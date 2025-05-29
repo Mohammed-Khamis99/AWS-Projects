@@ -41,7 +41,10 @@ This project automates photo quality assessment using Amazon Rekognition. Client
 - **Description:**
 This project demonstrates the evolution of a WordPress web application from a single instance deployment to a scalable, highly available architecture on AWS. The final architecture leverages multiple AWS services to ensure resilience, auto-scaling, and separation of concerns across tiers.
 
-**Project :
+**Project 5: [[Database Migration: On-Premises (VPC Simulated) to AWS](https://github.com/Mohammed-Khamis99/AWS-Projects/tree/9f1ff34e43d514b1c4f474b22d2a7d0e6af479c8/Database%20Migration%3A%20On-Premises%20(VPC%20Simulated)%20to%20AWS)]**
+
+- **Description:**
+This project demonstrates a database migration strategy from a simulated on-premises environment to AWS. The "on-premises" setup is achieved by deploying resources within a Virtual Private Cloud (VPC) that mimics an isolated network, while connectivity to AWS is established using a VPC Peering connection.
 
 ## Contact
 
